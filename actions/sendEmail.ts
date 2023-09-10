@@ -5,13 +5,12 @@ import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_c9iRVMvP_GS7aeNvUQzFhFkqWFHyabLVN");
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
-  // simple server-side validation
   if (!validateString(senderEmail, 500)) {
     return {
       error: "Invalid sender email",
