@@ -35,52 +35,68 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Data Science Research Analyst",
+    location: "Toronto, Canada",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Volunteered as a data science project research assistant for a team at Intelligence Adaptive Interventions Lab during the 2023 summer term. Languages: Python • R",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Math Tutor",
+    location: "Online",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Held meetings at least twice a week over a 3 month period, communicating and checking in on students' progress and their personal foresight on their academic career. Subjects: algebra • geometry • probability • logic & reasoning • problem solving",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2020 - 2021",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "ShopEaze",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Designed, developed, and tested an Android native mobile e-commerce application built with Java as a scrum master in a agile environment.",
+    tags: ["Java", "Firebase", "Android Studio", "Figma", "Jira", "Git"],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "Housing Price Predictor",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Developed and implemented data visualization and machine learning to predict housing prices.",
+    tags: ["Python", "NumPy", "Python", "Matplotlib", "Jupyter Notebook"],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "Handwritten Digit Predictor",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Developed, trained, and tested a model using nerual networks in Python to predict the number in which was inscribed on a 28x28 pixel PNG file.",
+    tags: ["Python", "TensorFlow", "NumPy", "Matplotlib", "Keras"],
     imageUrl: wordanalyticsImg,
+  },
+  {
+    title: "Enhanced Portfolio (This)",
+    description: "Fully designed and developed a cutting-edge personal portfolio website using Next.js 13.",
+    tags: ["TypeScript", "Next.js", "React.js", "Tailwind CSS", "Framer Motion", "Git"],
+    imageUrl: wordanalyticsImg
+  },
+  {
+    title: "Bike Theft Report",
+    description: "Analyzed and produced an informative public report on bike safety concerns in Toronto and its surrounding areas with reagrds to the precedence of stolen bikes in certain areas.",
+    tags: ["R", "R Studio", "Git"],
+    imageUrl: wordanalyticsImg
+  },
+  {
+    title: "TaskTango",
+    description: "Fully engineered a mobile iOS native app that revolutionizes task management with its sleek design and intuitive user interface, making it effortless to organize your to-do list.",
+    tags: ["Swift", "Xcode"],
+    imageUrl: wordanalyticsImg
+  },
+  {
+    title: "UTSC Hockey Team",
+    description: "Fully engineered a website for universities ice hockey team.",
+    tags: ["React.js", "Tailwind CSS","Git"],
+    imageUrl: wordanalyticsImg
   },
 ] as const;
 
@@ -91,17 +107,25 @@ export const skillsData = [
   "TypeScript",
   "React",
   "Next.js",
-  "Node.js",
+  "C",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
+  "R",
   "Python",
-  "Django",
+  "SQL",
+  "Firebase",
+  "R Studio",
+  "Android Studio",
+  "Jira",
+  "Flask",
+  "Eclipse",
   "Framer Motion",
+  "Jupyter Notebook",
+  "NumPy",
+    "Matplotlib",
+    "Keras",
+    "TensorFlow",
+    "LATEX",
+    "Swift",
+    "Xcode",
 ] as const;
