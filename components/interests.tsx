@@ -28,7 +28,7 @@ export default function Interests() {
     <section
         id="interests"
         ref={ref}
-        className="mb-28 max-w-[60rem] scroll-mt-28 sm:mb-45">
+        className="mb-28 max-w-[60rem] scroll-mt-28 sm:mb-[15rem]">
         <SectionHeading>Interests</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {interestsData.map((interest) => (

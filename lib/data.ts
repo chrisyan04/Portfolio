@@ -42,22 +42,24 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Data Science Research Analyst",
+    title: "Data Science Research Assistant",
+    company: "IAI Lab",
     location: "Toronto, Canada",
     description:
       "Volunteered as a data science project research assistant for a team at Intelligence Adaptive Interventions Lab during the 2023 summer term.",
     skills: "Python • R • EDA • Data Visualization • Statistics",
     icon: React.createElement(LuGraduationCap),
-    date: "2023",
+    date: "Jun 2023 - Sep 2023",
   },
   {
     title: "Math Tutor",
+    company: "Literacy Initiative",
     location: "Online",
     description:
       "Held meetings at least twice a week over a 3 month period, communicating and checking in on students' progress and their personal foresight on their academic career.",
-    skills: " algebra • geometry • probability • logic & reasoning",
+    skills: " algebra • geometry • probability",
     icon: React.createElement(CgWorkAlt),
-    date: "2020 - 2021",
+    date: "Nov 2020 - Jan 2021",
   },
 ] as const;
 
@@ -82,7 +84,7 @@ export const projectsData = [
     title: "Handwritten Digit Predictor",
     githubUrl:"https://github.com/chrisyan04/Handwritten-Digit-Predictor",
     description:
-      "Developed, trained, and tested a model using nerual networks in Python to predict the number in which was inscribed on a 28x28 pixel PNG file.",
+      "Developed, trained, and tested a model using nerual networks in Python to predict the number in which is inscribed on a PNG file.",
     tags: ["Python", "TensorFlow", "NumPy", "Matplotlib", "Keras"],
     imageUrl: codingmanImg,
   },
@@ -207,7 +209,7 @@ export const interestsData = [
     title: 'Software Development', 
     bulletPoints: [
       'I am a software developing aficionado with the passion of developing user-friendly web and mobile applications.',
-      'Whether it be with Vanilla JS, React.js, Python, Java, etc., it excites me in finding the art of coding and the endless possibilities it has to offer to solve complex problems and create innovative applications for many people to use.',
+      'Whether it be with TypeScript, React.js, Python, Java, etc. it excites me in finding the art of programming and the endless possibilities it has to offer to solve complex problems and create innovative applications for many people to use.',
       'Personally, software development is not just a career for me, rather a lifelong pursuit of excellence.'
     ], 
   },

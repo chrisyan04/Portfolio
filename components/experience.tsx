@@ -64,12 +64,15 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-bold capitalize dark:text-amber-100 text-black">{item.title}</h3>
+              <div className="capitalize flex relative dark:bg-black/50 p-[1rem] bg-gray-300/50 rounded-lg mb-[0.75rem]">
+                <h3 className="font-bold dark:text-amber-100 text-black flex-grow">{item.title}</h3>
+                <h3 className="font-semibold italic text-teal-600 dark:text-teal-200 lg:static">{item.company}</h3>
+              </div>
               <p className="font-normal !mt-0 text-black/50 dark:text-white">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
-              <p className="!mt-3 !font-normal text-teal-600 dark:text-teal-200">
+              <p className="!font-normal text-teal-600 dark:text-teal-200 !mt-3 text-center">
                 {item.skills}
               </p>
             </VerticalTimelineElement>
