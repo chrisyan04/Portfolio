@@ -64,6 +64,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "ShopEaze",
+    githubUrl:"https://github.com/AndreyZIno/ShopEaze",
     description:
       "Designed, developed, and tested an Android native mobile e-commerce application built with Java as a scrum master in a agile environment.",
     tags: ["Java", "Firebase", "Git", "Android Studio", "Figma", "Jira"],
@@ -71,6 +72,7 @@ export const projectsData = [
   },
   {
     title: "Housing Price Predictor",
+    githubUrl:"https://github.com/chrisyan04/House-Pricing-Predictor",
     description:
       "Developed and implemented data visualization and machine learning to predict housing prices.",
     tags: ["Python", "NumPy", "Pandas", "Matplotlib", "JupyterNotebook"],
@@ -78,6 +80,7 @@ export const projectsData = [
   },
   {
     title: "Handwritten Digit Predictor",
+    githubUrl:"https://github.com/chrisyan04/Handwritten-Digit-Predictor",
     description:
       "Developed, trained, and tested a model using nerual networks in Python to predict the number in which was inscribed on a 28x28 pixel PNG file.",
     tags: ["Python", "TensorFlow", "NumPy", "Matplotlib", "Keras"],
@@ -85,18 +88,21 @@ export const projectsData = [
   },
   {
     title: "Bike Theft Report",
+    githubUrl:"https://github.com/chrisyan04/Toronto-Bike-Theft-Report",
     description: "Analyzed and produced an informative public report on bike safety concerns in Toronto and its surrounding areas with reagrds to the precedence of stolen bikes in certain areas.",
     tags: ["R", "R Studio", "Git"],
     imageUrl: bikereportImg
   },
   {
     title: "UTSC Notes",
+    githubUrl:"https://github.com/chrisyan04/UTSC-Notes",
     description: "A compilation of notes I took when taking UofT CMS+ courses. Includes courses: CSCB07, MATB24, ...",
     tags: ["Notion", "HTML"],
     imageUrl: notesImg
   },
   {
     title: "UTSC Hockey Team",
+    githubUrl:"https://github.com/chrisyan04/UTSC-Hockey",
     description: "Fully engineered a website for university's mens' ice hockey team. This project is currently under construction.",
     tags: ["React.js", "Tailwind CSS","Git"],
     imageUrl: utschockeyImg
