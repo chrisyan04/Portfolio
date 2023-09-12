@@ -64,9 +64,9 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <div className="capitalize flex relative dark:bg-black/50 p-[1rem] bg-gray-300/50 rounded-lg mb-[0.75rem]">
-                <h3 className="font-bold dark:text-amber-100 text-black flex-grow">{item.title}</h3>
-                <h3 className="font-semibold italic text-teal-600 dark:text-teal-200 lg:static">{item.company}</h3>
+              <div className="capitalize flex dark:bg-black/50 p-[1rem] bg-gray-300/50 rounded-lg mb-[0.75rem]">
+                <div className="flex-grow"><h3 className="font-bold dark:text-amber-100 text-black flex-grow">{item.title}</h3></div>
+                <div><h3 className="font-semibold italic text-teal-600 dark:text-teal-200">{item.company}</h3></div>
               </div>
               <p className="font-normal !mt-0 text-black/50 dark:text-white">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
