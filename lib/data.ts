@@ -217,7 +217,7 @@ export const interestsData = [
     icon:"🏒 ", 
     title: 'Hockey', 
     bulletPoints: [
-      'Hockey has always been my SPORT. Having played it personally at a competitive level for over 15 years, it has become one of my most passionate interests.',
+      'Hockey has been my favorite sport since childhood. Having played it personally at a competitive level for over 15 years, it has become one of my most passionate interests in life.',
       'Along with my pursuit in a career of software and data science, I\'m excited about the potential to leverage technology to improve player performance, fan engagement, and the overall hockey experience in the new age of technology.',
       '#PuckIsLife'
     ],

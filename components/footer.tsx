@@ -7,7 +7,7 @@ export default function Footer() {
         &copy; 2023 Chris Yan. All rights reserved.
       </small>
       <p className="text-xs">
-        Made with ✌🏼 and ❤️ from 🇨🇦
+        Made with ❤️ from 🇨🇦
       </p>
     </footer>
   );
