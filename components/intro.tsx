@@ -23,6 +23,8 @@ export default function Intro() {
         const options = {
           strings: [
             '<span class="font-bold">Hi, my name\'s Chris!</span>',
+            '<span class="font-bold">Bonjour, je m\'appelle Chris!</span>',
+            '<span class="font-bold">你好, 我叫 Chris!</span>',
             '<span> I\'m a UofT Student</span>',
             '<span> I\'m a Software Developer</span>',
             '<span> I\'m a budding Data Scientist</span>',
