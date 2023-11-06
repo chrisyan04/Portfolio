@@ -8,6 +8,7 @@ import housingImg from "@/public/housing.gif";
 import shopeazeImg from "@/public/shopeaze.gif";
 import notesImg from "@/public/notes-bgcard-bg.gif";
 import utschockeyImg from "@/public/utsc.gif";
+import charitychainImg from "@/public/charitychain.png"
 
 export const links = [
   {
@@ -65,6 +66,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "CharityChain",
+    githubUrl:"https://github.com/meliadamian17/charitychain",
+    description:
+      "Performed fullstack engineering for an enhanced user experience and optimal data storage and data retrieval. Implemented usage of RESTful APIs.",
+    tags: ["JavaScript", "React.js", "Node.js", "Firebase", "Figma", "Git"],
+    imageUrl: charitychainImg,
+  },
+  {
     title: "ShopEaze",
     githubUrl:"https://github.com/AndreyZIno/ShopEaze",
     description:
@@ -80,14 +89,14 @@ export const projectsData = [
     tags: ["Python", "NumPy", "Pandas", "Matplotlib", "JupyterNotebook"],
     imageUrl: housingImg,
   },
-  {
-    title: "Handwritten Digit Predictor",
-    githubUrl:"https://github.com/chrisyan04/Handwritten-Digit-Predictor",
-    description:
-      "Developed, trained, and tested a model using nerual networks in Python to predict the number in which is inscribed on a PNG file.",
-    tags: ["Python", "TensorFlow", "NumPy", "Matplotlib", "Keras"],
-    imageUrl: codingmanImg,
-  },
+  // {
+  //   title: "Handwritten Digit Predictor",
+  //   githubUrl:"https://github.com/chrisyan04/Handwritten-Digit-Predictor",
+  //   description:
+  //     "Developed, trained, and tested a model using neural networks in Python to predict the number in which is inscribed on a PNG file.",
+  //   tags: ["Python", "TensorFlow", "NumPy", "Matplotlib", "Keras"],
+  //   imageUrl: codingmanImg,
+  // },
   {
     title: "Bike Theft Report",
     githubUrl:"https://github.com/chrisyan04/Toronto-Bike-Theft-Report",
@@ -102,13 +111,13 @@ export const projectsData = [
     tags: ["Notion", "HTML"],
     imageUrl: notesImg
   },
-  {
-    title: "UTSC Hockey Team",
-    githubUrl:"https://github.com/chrisyan04/UTSC-Hockey",
-    description: "Fully engineered a website for university's mens' ice hockey team. This project is currently under construction.",
-    tags: ["React.js", "Tailwind CSS","Git"],
-    imageUrl: utschockeyImg
-  },
+  // {
+  //   title: "UTSC Hockey Team",
+  //   githubUrl:"https://github.com/chrisyan04/UTSC-Hockey",
+  //   description: "Currently engineering a website for university's mens' ice hockey team.",
+  //   tags: ["React.js", "Tailwind CSS","Git"],
+  //   imageUrl: utschockeyImg
+  // },
 ] as const;
 
 export const skillsData = [
