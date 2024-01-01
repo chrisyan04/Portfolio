@@ -54,7 +54,6 @@ export default function Navbar({ links }: { links: Link[] }) {
                   href={encodeURI(href)}
                   onClick={() => setToggle(false)}
                 >
-
                   {title}
                 </Link>
               </li>
@@ -65,14 +64,16 @@ export default function Navbar({ links }: { links: Link[] }) {
 
       <div
         className={`toggle md:hidden md:pointer-events-none w-[65px] h-[65px] relative mt-[10px] caret-transparent cursor-pointer rotate-0 transition ease-in-out duration-500 motion-reduce:transition-none ${
-          toggle && 'open'
+          toggle && "open"
         } `}
-        onClick={() => setToggle(!toggle)}>
+        onClick={() => setToggle(!toggle)}
+      >
         {[...Array(6)].map((_, id) => {
           return (
             <span
               key={id}
-              className="block absolute h-[9px] w-1/2 bg-white  opacity-100 rotate-0"></span>
+              className="block absolute h-[9px] w-1/2 bg-white  opacity-100 rotate-0"
+            ></span>
           );
         })}
       </div>

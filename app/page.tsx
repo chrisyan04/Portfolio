@@ -1,5 +1,7 @@
 import Navbar, { type Link } from "@/components/Navbar";
 import Hero from "@/components/Home/Hero";
+import About from "@/components/Home/About";
+import Skills from "@/components/Home/Skills";
 
 const links: Link[] = [
   { href: "/", title: "Home" },
@@ -14,6 +16,8 @@ export default function Home() {
     <main className="">
       <Navbar links={links} />
       <Hero />
+      <About />
+      <Skills />
     </main>
   );
 }
