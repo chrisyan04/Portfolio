@@ -74,7 +74,7 @@ export default function Hero() {
 
       {resumeToggle && (
         <div className="modal-container">
-          <div className="modal-background" onClick={handleResumeToggle}></div>
+          <div className="modal-background bg-transparent backdrop-blur-sm" onClick={handleResumeToggle}></div>
           <div className="modal-content">
             <button className="close" onClick={handleResumeToggle}>
               &times;

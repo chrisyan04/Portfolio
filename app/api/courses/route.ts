@@ -1,17 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { connectDB } from "@/db/config";
-import Work, { type IWork } from "@/db/models/work";
+import Courses, { type ICourses } from "@/db/models/courses";
 
-let submission: Omit<IWork, "code"> = {
-    job_name: '',
-    company_name: '',
-    job_location: '',
-    job_description: '',
-    job_start_date: '',
-    job_end_date: '',
-    job_skills: [],
-    job_number: 0,
+let submission: Omit<ICourses, "code"> = {
+  course_name: "",
 };
 
 export async function POST(request: NextRequest) {
@@ -20,11 +13,11 @@ export async function POST(request: NextRequest) {
 
     submission = await request.json();
 
-    await new Work({ ...submission }).save();
+    await new Courses({ ...submission }).save();
 
     return NextResponse.json(
       {
-        message: `${submission.job_name} at ${submission.company_name} created successfully!`,
+        message: `${submission.course_name} created successfully!`,
       },
       { status: 201 }
     );
@@ -36,6 +29,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    return NextResponse.json({ error: error.message }, { status: 400 });
+  }
+}
+
+export async function GET() {
+  try {
+    connectDB();
+
+    const courses = await Courses.find({});
+
+    return NextResponse.json(courses, { status: 200 });
+  } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 400 });
   }
 }

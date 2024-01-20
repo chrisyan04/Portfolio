@@ -1,15 +1,38 @@
-<h1 align="center">Welcome &nbsp; <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" height="50" weight="50"/></h1>
-<h3 align="center"><ins>Introduction</ins></h3>
-<p align="center"><b>Hi, I'm Chris! If you are reading this you may be interested in my personal portfolio website.<br>To visit it, please click <a href="https://www.chrisyan.ca/" >here</a>!</b></p>
-<br>
-<h3 align="center"><ins>About</ins></h3>
-<p align="center">This project was created with the use of:</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" />
-</p>
+   
+new portfolio website (deadline jan 7th)
+
+- use of mongodb, nextjs, typescript, tailwindcss
+  - connect mongodb with mongoose
+- use of light and dark mode (optional)
+- (optional) change of language (eng, fr, chn)
+
+Navbar:- standard navbar (see ds3)
+
+Footer:
+- standard footer (see ds3)
+
+Home Page:
+- hero (include resume: click and popout resume, give option to download pdf)
+- about
+- skills (language proficiency - react progress bar)
+  - use: https://react-bootstrap.netlify.app/docs/components/progress/
+
+Work Page:
+- work (timeline)
+- certifications
+
+Projects Page:
+- projects
+
+News Page:
+- anything new about me or my interests (under construction)
+  - blog: think pinterest style with pictures and also column with quotes of the day
+- github stats
+- Chris's Todo list (features: like button, completed/not complete style)
+- uoft courses taken
+
+Contact Page:
+- fake linkedin profile (Want to see my linkedin profile privately without me seeing your actions? Well, ill be nice and do what linkedin can't do and you can view my profile anonymously here. - click to popout linked profile [takes to new page]: web scrape my linkedin)
+- other social media links
+- reattach resume
+- no contact form
