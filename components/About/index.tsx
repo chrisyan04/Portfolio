@@ -110,6 +110,7 @@ export default function About() {
               &times;
             </button>
             <Image
+              priority
               src={resumeWebp}
               alt="Resume"
               width={400}
