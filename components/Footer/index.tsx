@@ -11,7 +11,7 @@ export default function Footer() {
       <center>
         <div className="footer__container container">
           <h1 className="footer__title text-3xl text-green-500">
-            // Chris (yanner)
+            {"// Chris (yanner)"}
           </h1>
           <div className="max-sm:grid max-sm:grid-cols-2 flex justify-center items-center">
             <div className="max-sm:my-2 mx-4">

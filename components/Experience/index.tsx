@@ -19,7 +19,7 @@ export default function Experience() {
 
   return (
     <section className="qualification section" id="experience">
-      <h2 className="section__title text-4xl text-green-500">// Experience</h2>
+      <h2 className="section__title text-4xl text-green-500">{"// Experience"}</h2>
       <span className="section__subtitle">
         <TypeAnimation
           sequence={[
@@ -217,7 +217,7 @@ export default function Experience() {
         </div>
       </div>
       <div className="text-center pt-12 text-sm">
-        <p>// For more information, check out my notLinkedIn page </p>
+        <p>{"// For more information, check out my notLinkedIn page "}</p>
         <center>
           <Link href="/not-linkedin" target="_blank">
             <svg

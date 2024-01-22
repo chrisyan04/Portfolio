@@ -15,13 +15,13 @@ export default function Projects() {
         })}
         <div className="flex justify-center items-center flex-col">
           <h3 className="text-center text-white/60">
-            // Click on the icon to explore
+            {"// Click on the icon to explore"}
           </h3>
           <h3 className="text-center text-green-500">
-            //
+            {"//"}
             <span className="font-bold italic underline">ALL</span>
           </h3>
-          <h3 className="text-center text-white/60">// of my projects</h3>
+          <h3 className="text-center text-white/60">{"// of my projects"}</h3>
           <Link href="/projects" target="_blank">
             <svg
               className="mt-4 cursor-pointer"

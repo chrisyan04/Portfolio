@@ -39,7 +39,7 @@ export default function Skills() {
   ];
   return (
     <section className="skills section" id="skills">
-      <h2 className="section__title text-4xl text-green-500">// Skills</h2>
+      <h2 className="section__title text-4xl text-green-500">{"// Skills"}</h2>
       <span className="section__subtitle pb-10">
         Currently Lvl. <span className="text-green-500/80">36</span> 🔀 Journey
         to Lvl. <span className="text-green-500/80">100</span> 📈

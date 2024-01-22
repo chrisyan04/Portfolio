@@ -5,12 +5,12 @@ import React from "react";
 export default function Data() {
   return (
     <div className="home__data">
-      <h1 className="home__title text-green-500">// Chris · Yan</h1>
+      <h1 className="home__title text-green-500">{"// Chris · Yan"}</h1>
       <h3 className="home__subtitle">
         <span className="text-white/90">
           Trekking in a <br />{" "}
         </span>
-        <span className="italic text-green-500">// World of Wonder</span>
+        <span className="italic text-green-500">{"// World of Wonder"}</span>
       </h3>
       <div className="home__description rounded-lg relative">
         <p>

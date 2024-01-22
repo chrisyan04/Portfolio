@@ -26,7 +26,7 @@ export default function About() {
   };
   return (
     <section className="about section" id="about">
-      <h2 className="section__title text-4xl text-green-500">// About · Me</h2>
+      <h2 className="section__title text-4xl text-green-500">{"// About · Me"}</h2>
       <span className="section__subtitle">I promise, I'm not boring! 😊</span>
       <div className="about__container container grid">
         <Image
