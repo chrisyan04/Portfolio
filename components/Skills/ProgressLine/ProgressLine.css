@@ -1,0 +1,18 @@
+.progressVisualFull {
+  display: flex;
+  width: 400px;
+  height: 15px;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+.progressVisualPart {
+  transition: width 3s;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .progressVisualFull {
+    width: 200px;
+  }
+}

@@ -1,23 +1,30 @@
-import Navbar, { type Link } from "@/components/Navbar";
-import Hero from "@/components/Home/Hero";
-import About from "@/components/Home/About";
-import Skills from "@/components/Home/Skills";
-
-const links: Link[] = [
-  { href: "/", title: "Home" },
-  { href: "/work", title: "Work" },
-  { href: "/projects", title: "Projects" },
-  { href: "/news", title: "Blog" },
-  { href: "/contact", title: "Contact" },
-];
+import CursorTrailCanvas from "@/components/CursorTrailCanvas";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Home";
+import About from "@/components/About";
+import ScrollUp from "@/components/ScrollUp";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Portfolio from "@/components/Portfolio";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="">
-      <Navbar links={links} />
-      <Hero />
-      <About />
-      <Skills />
-    </main>
+    <>
+      {/* <CursorTrailCanvas
+        color="hsla(183, 64%, 27%, 0.4)"
+        className="pointer-events-none fixed inset-0 z-[999] h-full w-full"
+      /> */}
+      <Navbar />
+      <main className="main">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Portfolio />
+      </main>
+      <Footer />
+      <ScrollUp />
+    </>
   );
 }

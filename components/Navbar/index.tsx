@@ -1,82 +1,94 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import logo from "@/public/logo.webp";
 import Link from "next/link";
+import {
+  HiOutlineHome,
+  HiOutlineUser,
+  HiOutlineBadgeCheck,
+  HiOutlineClipboardList,
+  HiOutlineCode,
+  HiOutlineMail,
+  HiX,
+  HiOutlineMenu,
+} from "react-icons/hi";
 import "./Navbar.css";
+import Sig from "@/public/chris_sig.webp";
+import Image from "next/image";
 
-export interface Link {
-  title: string;
+const NAV_LINKS = {
+  HOME: "#home",
+  ABOUT: "#about",
+  SKILLS: "#skills",
+  EXPERIENCE: "#experience",
+  PROJECTS: "#projects",
+  CONTACT: "#contact",
+};
+
+const getIcon = (key: string) => {
+  switch (key) {
+    case "HOME":
+      return <HiOutlineHome className="nav__icon" />;
+    case "ABOUT":
+      return <HiOutlineUser className="nav__icon" />;
+    case "SKILLS":
+      return <HiOutlineBadgeCheck className="nav__icon" />;
+    case "EXPERIENCE":
+      return <HiOutlineClipboardList className="nav__icon" />;
+    case "PROJECTS":
+      return <HiOutlineCode className="nav__icon" />;
+    case "CONTACT":
+      return <HiOutlineMail className="nav__icon" />;
+    default:
+      return null;
+  }
+};
+
+const NavLink: React.FC<{
   href: string;
-}
+  text: string;
+  setActiveNav: React.Dispatch<React.SetStateAction<string>>;
+  activeNav: string;
+}> = ({ href, text, setActiveNav, activeNav }) => (
+  <Link
+    href={href}
+    onClick={() => setActiveNav(href)}
+    className={activeNav === href ? "nav__link active-link" : "nav__link"}
+  >
+    {getIcon(text)}
+    {text}
+  </Link>
+);
 
-export default function Navbar({ links }: { links: Link[] }) {
+export default function Navbar() {
   const [toggle, setToggle] = useState(false);
-  return (
-    <header
-      className={`items-center fixed w-full flex justify-between z-10 px-4 backdrop-blur-sm pt-2 pb-2 bg-transparent shadow-2xl ${
-        toggle &&
-        "h-full pb-[calc(100vh-5em)] transition duration-1000 ease-in-out md:h-auto md:pb-0 md:transition-none portrait:h-auto"
-      }`}
-    >
-      <a href="/" tabIndex={0}>
-        <Image
-          priority
-          src={logo}
-          alt="Chris Logo"
-          height={200}
-          width={200}
-          style={{ height: "70px", width: "70px" }}
-          className="rounded-full"
-        />
-      </a>
-      <nav
-        className={`fixed w-full left-0 -top-[100vh] duration-1000 md:static md:w-auto md:duration-0 md:visible ${
-          toggle
-            ? "h-full visible translate-y-[calc(100vh_+_5em)] transition ease-in-out duration-1000 md:h-auto md:transform-none md:transition-none"
-            : "invisible"
-        }`}
-      >
-        <ul
-          className={`mb-0 md:pl-0 flex flex-wrap justify-between items-center ${
-            toggle && "active"
-          }`}
-        >
-          {links.map(({ href, title }: Link, id) => {
-            return (
-              <li
-                className="item block order-3 w-full text-center p-[10px] md:relative md:w-auto"
-                key={id}
-              >
-                <Link
-                  className="block text-2xl md:text-lg text-gray-900 dark:text-amber-100 px-[5px] py-[15px] font-bold transition duration-500 ease-in-out transform hover:scale-105 hover:text-[#6c757d] hover:bg-opacity-50 rounded-md"
-                  href={encodeURI(href)}
-                  onClick={() => setToggle(false)}
-                >
-                  {title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
+  const [activeNav, setActiveNav] = useState<string>(NAV_LINKS.HOME);
 
-      <div
-        className={`toggle md:hidden md:pointer-events-none w-[65px] h-[65px] relative mt-[10px] caret-transparent cursor-pointer rotate-0 transition ease-in-out duration-500 motion-reduce:transition-none ${
-          toggle && "open"
-        } `}
-        onClick={() => setToggle(!toggle)}
-      >
-        {[...Array(6)].map((_, id) => {
-          return (
-            <span
-              key={id}
-              className="block absolute h-[9px] w-1/2 bg-white  opacity-100 rotate-0"
-            ></span>
-          );
-        })}
-      </div>
+  return (
+    <header className="header">
+      <nav className="nav container">
+        <Link href={NAV_LINKS.HOME} className="nav__logo">
+          <Image src={Sig} alt="logo" height={200} style={{ height: "45px", width: "auto" }} />
+        </Link>
+        <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
+          <ul className="nav__list grid">
+            {Object.entries(NAV_LINKS).map(([key, value]) => (
+              <li className="nav__item" key={key}>
+                <NavLink
+                  href={value}
+                  text={key}
+                  setActiveNav={setActiveNav}
+                  activeNav={activeNav}
+                />
+              </li>
+            ))}
+          </ul>
+          <HiX className="nav__close" onClick={() => setToggle(!toggle)} />
+        </div>
+        <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
+          <HiOutlineMenu />
+        </div>
+      </nav>
     </header>
   );
 }
