@@ -68,6 +68,9 @@ dependencies:
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
+  swiper:
+    specifier: ^11.0.5
+    version: 11.0.5
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -8093,6 +8096,11 @@ packages:
       react: '>=17.0'
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /swiper@11.0.5:
+    resolution: {integrity: sha512-rhCwupqSyRnWrtNzWzemnBLMoyYuoDgGgspAm/8iBD3jCvAWycPLH4Z3TB0O5520DHLzMx94yUMH/B9Efpa48w==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /tailwindcss-textshadow@2.1.3:

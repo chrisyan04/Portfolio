@@ -13,3 +13,12 @@ module.exports = {
     }),
   ],
 };
+
+module.exports.module = {
+  rules: [
+    {
+      test: /\.js$/,
+      loader: 'null-loader'
+    }
+  ]
+};
