@@ -7,11 +7,6 @@ module.exports = {
     filename: 'myLib.js',
     globalObject: 'globalThis'
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      self: 'typeof self !== "undefined" ? self : this',
-    }),
-  ],
 };
 
 module.exports.module = {

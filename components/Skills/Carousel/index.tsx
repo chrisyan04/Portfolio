@@ -1,8 +1,15 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react'
-import Carousel from 'react-spring-3d-carousel';
+import React, { useEffect, useState } from "react";
+// import Carousel from 'react-spring-3d-carousel';
 import { config } from "react-spring";
+import dynamic from "next/dynamic";
+
+const Carousel = dynamic(
+  // @ts-ignore
+  () => import("react-spring-3d-carousel"), {
+  ssr: false,
+});
 
 interface Skill {
   name: string;
@@ -19,7 +26,7 @@ interface SkillsCarouselProps {
 
 export default function SkillsCarousel(props: SkillsCarouselProps) {
   const table = props.cards.map((element: Skill, index: number) => {
-    return { ...element, onClick: () => setGoToSlide(index) }
+    return { ...element, onClick: () => setGoToSlide(index) };
   });
 
   const [offsetRadius, setOffsetRadius] = useState(2);
@@ -30,10 +37,19 @@ export default function SkillsCarousel(props: SkillsCarouselProps) {
   useEffect(() => {
     setOffsetRadius(props.offset);
     setShowArrows(props.showArrows);
-  }, [props.offset, props.showArrows])
+  }, [props.offset, props.showArrows]);
   return (
-    <div style={{ width: props.width, height: props.height, margin: props.margin }}>
-      <Carousel slides={cards} goToSlide={goToSlide} offsetRadius={offsetRadius} showNavigation={showArrows} animationConfig={config.gentle} />
+    <div
+      style={{ width: props.width, height: props.height, margin: props.margin }}
+    >
+      <Carousel
+        slides={cards}
+        goToSlideDelay={500}
+        goToSlide={goToSlide}
+        offsetRadius={offsetRadius}
+        showNavigation={showArrows}
+        animationConfig={config.gentle}
+      />
     </div>
-  )
+  );
 }
