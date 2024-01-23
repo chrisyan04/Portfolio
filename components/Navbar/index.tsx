@@ -13,7 +13,7 @@ import {
   HiOutlineMenu,
 } from "react-icons/hi";
 import "./Navbar.css";
-import Sig from "@/public/chris_sig.webp";
+import Sig from "@/public/chris-sig.svg";
 import Image from "next/image";
 
 const NAV_LINKS = {
@@ -68,7 +68,7 @@ export default function Navbar() {
     <header className="header">
       <nav className="nav container">
         <Link href={NAV_LINKS.HOME} className="nav__logo">
-          <Image src={Sig} alt="logo" height={200} style={{ height: "45px", width: "auto" }} />
+          <Image src={Sig} alt="logo" height={200} style={{ height: "100px", width: "auto" }} />
         </Link>
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">

@@ -20,7 +20,7 @@ export default function ProjectItems({ item }: ProjectItemsProps) {
 
   return (
     <div
-      className={`flex flex-col relative ${
+      className={`flex flex-col relative max-sm:ml-2 max-sm:-mr-2 ${
         isFront ? "z-10" : "z-1"
       }`}
     >
@@ -34,7 +34,7 @@ export default function ProjectItems({ item }: ProjectItemsProps) {
         onClick={handleClick}
       />
       <div
-        className={`project__card flex flex-col items-center justify-center -mt-40 max-sm:-mt-26 max-sm:ml-12 max-sm:mr-0 ${
+        className={`project__card flex flex-col items-center justify-center max-sm:mb-3 -mt-40 max-sm:-mt-26 max-sm:-ml-4 max-sm:mr-4 ${
           isOdd ? "-ml-12 mr-12" : "-mr-36 ml-36"
         } ${isFront ? "z-10" : "z-1"}`}
         key={item.id}
