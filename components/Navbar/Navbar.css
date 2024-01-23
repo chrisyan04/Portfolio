@@ -113,7 +113,7 @@
     .nav__toggle {
         font-size: 1.1rem;
         cursor: pointer;
-        padding-right: 3rem;
+        padding-right: 2.5rem;
     }
 
     .nav__icon, .nav__close, .nav__toggle {

@@ -23,6 +23,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.2.7
     version: 18.2.7
+  animejs:
+    specifier: ^3.2.2
+    version: 3.2.2
   eslint:
     specifier: 8.48.0
     version: 8.48.0
@@ -79,6 +82,9 @@ dependencies:
     version: 9.0.1
 
 devDependencies:
+  '@types/animejs':
+    specifier: ^3.1.12
+    version: 3.1.12
   '@types/uuid':
     specifier: ^9.0.7
     version: 9.0.7
@@ -2974,6 +2980,10 @@ packages:
       zod: 3.22.4
     dev: false
 
+  /@types/animejs@3.1.12:
+    resolution: {integrity: sha512-fpdH+ZtlO0kqjTOqRaBdsEmvpRNOayI8k4EVkEtitL5l6wducDOXk0rgQgfZqWf/ZX9DzXrHf257S5i9xTcISQ==}
+    dev: true
+
   /@types/eslint-scope@3.7.7:
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
     dependencies:
@@ -3378,6 +3388,10 @@ packages:
       require-from-string: 2.0.2
       uri-js: 4.4.1
     dev: true
+
+  /animejs@3.2.2:
+    resolution: {integrity: sha512-Ao95qWLpDPXXM+WrmwcKbl6uNlC5tjnowlaRYtuVDHHoygjtIPfDUoK9NthrlZsQSKjZXlmji2TrBUAVbiH0LQ==}
+    dev: false
 
   /anser@1.4.10:
     resolution: {integrity: sha512-hCv9AqTQ8ycjpSd3upOJd7vFwW1JaoYQ7tpham03GJ1ca8/65rqn0RpaWpItOAd6ylW9wAw6luXYPJIyPFVOww==}
