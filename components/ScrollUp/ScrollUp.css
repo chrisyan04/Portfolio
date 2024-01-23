@@ -2,11 +2,10 @@
     position: fixed;
     right: 2.5rem;
     bottom: -20%;
-    background-color: rgb(255,255,255,0.9);
-    opacity: 0.8;
+    background-color: rgba(21, 114, 16);
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
-    z-index: var(--tooltip);
+    z-index: 100;
     transition: .4s;
 }
 
