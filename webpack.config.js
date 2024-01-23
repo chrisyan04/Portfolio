@@ -5,7 +5,7 @@ module.exports = {
     library: 'myLib',
     libraryTarget: 'umd',
     filename: 'myLib.js',
-    globalObject: 'this'
+    globalObject: 'globalThis'
   },
   plugins: [
     new webpack.DefinePlugin({

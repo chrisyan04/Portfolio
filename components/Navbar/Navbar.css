@@ -46,12 +46,10 @@
     color: #51e334;
 }
 
-/* CHANGE HEADER */
 /* .scroll-header {
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 } */
 
-/* BREAK POINTS */
 @media screen and (max-width: 768px) {
     .header {
         top: initial;

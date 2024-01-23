@@ -105,9 +105,9 @@
   margin-left: -50px;
   opacity: 0;
   transition: opacity 0.3s;
-  display: flex; /* Add flex container for centering */
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tooltip-container:hover .tooltip {
