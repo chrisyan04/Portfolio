@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import SplashScreen from "@/components/SplashScreen";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const pathname = usePathname();
@@ -38,7 +39,8 @@ export default function Home() {
             <About />
             <Skills />
             <Experience />
-            <Portfolio />
+              <Portfolio />
+              <Contact />
           </main>
           <Footer />
           <ScrollUp />
