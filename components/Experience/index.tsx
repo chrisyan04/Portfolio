@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import "./Experience.css";
@@ -18,8 +18,10 @@ export default function Experience() {
   };
 
   return (
-    <section className="qualification section" id="experience">
-      <h2 className="section__title text-4xl text-green-500">{"// Experience"}</h2>
+    <section className="experience section" id="experience">
+      <h2 className="section__title text-4xl text-green-500">
+        {"// Experience"}
+      </h2>
       <span className="section__subtitle">
         <TypeAnimation
           sequence={[
@@ -37,179 +39,205 @@ export default function Experience() {
         />
       </span>
 
-      <div className="qualification__container container">
-        <div className="qualification__tabs">
+      <div className="experience__container container -mt-8">
+        <div className="experience__tabs">
           <div
             className={
               toggleState === 1
-                ? "qualification__button button--flex qualification__active"
-                : "qualification__button button--flex"
+                ? "experience__button button--flex experience__active"
+                : "experience__button button--flex"
             }
             onClick={() => toggleTab(1)}
           >
-            <HiOutlineAcademicCap className="qualification__icon" />
+            <HiOutlineAcademicCap className="experience__icon" />
             $Education
           </div>
           <div
             className={
               toggleState === 2
-                ? "qualification__button button--flex qualification__active"
-                : "qualification__button button--flex"
+                ? "experience__button button--flex experience__active"
+                : "experience__button button--flex"
             }
             onClick={() => toggleTab(2)}
           >
-            <HiOutlineBriefcase className="qualification__icon" />
+            <HiOutlineBriefcase className="experience__icon" />
             $Work
           </div>
         </div>
 
-        <div className="qualification__sections">
+        <div className="experience__sections">
           <div
             className={
               toggleState === 1
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
+                ? "experience__content experience__content-active"
+                : "experience__content"
             }
           >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">HS Student</h3>
-                <span className="qualification__subtitle text-xs">
-                  Luther College High School
-                </span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Regina, SK
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  2018 - 2020
+            <div className="experience__data">
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  HS Student
+                </h3>
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">
+                    Luther College High School
+                  </span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Regina, SK
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    <p>2018 - 2020</p>
+                  </div>
                 </div>
               </div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
             </div>
-            <div className="qualification__data">
+            <div className="experience__data">
               <div></div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
-              <div>
-                <h3 className="qualification__title">HS Student</h3>
-                <span className="qualification__subtitle text-xs">
-                  Iroquois Ridge High School
-                </span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Oakville, ON
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  2020 - 2022
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  HS Student
+                </h3>
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">
+                    Iroquois Ridge High School
+                  </span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Oakville, ON
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    2020 - 2022
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">
-                  Machine Learning and Data Science
+            <div className="experience__data">
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 py-1 px-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  Machine Learning
                 </h3>
-                <span className="qualification__subtitle text-xs">
-                  University of Toronto
-                </span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Toronto, ON
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  2022 - Present
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">
+                    University of Toronto
+                  </span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Toronto, ON
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    2022 - Present
+                  </div>
                 </div>
               </div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
             </div>
           </div>
           <div
             className={
               toggleState === 2
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
+                ? "experience__content experience__content-active"
+                : "experience__content"
             }
           >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Math Tutor</h3>
-                <span className="qualification__subtitle text-xs">
-                  Literacy Initiative
-                </span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Online
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  Nov 2020 - Jan 2021
+            <div className="experience__data">
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  Math Tutor
+                </h3>
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">
+                    Literacy Initiative
+                  </span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Online
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    Nov 2020 - Jan 2021
+                  </div>
                 </div>
               </div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
             </div>
-            <div className="qualification__data">
+            <div className="experience__data">
               <div></div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
-              <div>
-                <h3 className="qualification__title">Data Analyst</h3>
-                <span className="qualification__subtitle text-xs">IAI Lab</span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Toronto, ON
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  Jun 2023 - Dec 2023
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  Data Analyst
+                </h3>
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">IAI Lab</span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Toronto, ON
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    Jun 2023 - Dec 2023
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Web Developer</h3>
-                <span className="qualification__subtitle text-xs">DS³</span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Toronto, ON
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  Nov 2023 - Present
+            <div className="experience__data">
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  Web Developer
+                </h3>
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">DS³</span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Toronto, ON
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    Nov 2023 - Present
+                  </div>
                 </div>
               </div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
             </div>
-            <div className="qualification__data">
+            <div className="experience__data">
               <div></div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className="experience__rounder"></span>
+                <span className="experience__line"></span>
               </div>
-              <div>
-                <h3 className="qualification__title">Data Scientist</h3>
-                <span className="qualification__subtitle text-xs">
-                  Difenda Inc.
-                </span>
-                <span className="qualification__subtitle text-xs italic mb-2">
-                  Oakville, ON
-                </span>
-                <div className="qualification__calendar">
-                  <HiOutlineCalendar className="qualification__calendar-icon" />
-                  Jan 2024 - Present
+              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+                  Data Scientist
+                </h3>
+                <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
+                  <span className="experience__subtitle text-xs">
+                    Difenda Inc.
+                  </span>
+                  <span className="experience__subtitle text-xs italic my-1">
+                    Oakville, ON
+                  </span>
+                  <div className="experience__calendar flex">
+                    <HiOutlineCalendar className="experience__calendar-icon text-lg mr-2" />
+                    Jan 2024 - Present
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,4 +266,4 @@ export default function Experience() {
       </div>
     </section>
   );
-};
+}
