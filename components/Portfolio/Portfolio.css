@@ -28,7 +28,6 @@
 
 .project__card {
     background-color: #333333;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.25rem;
@@ -66,13 +65,11 @@
     transform: translateX(0.25rem);
 }
 
-/* ACTIVE PROJECT */
 .active__project {
     background-color: var(--title-color);
     color: var(--container-color);
 }
 
-/* BREAK POINTS */
 @media screen and (max-width: 992px) {
     .project__container {
         gap: 1.25rem;

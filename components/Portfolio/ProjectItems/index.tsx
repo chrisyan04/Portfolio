@@ -28,13 +28,13 @@ export default function ProjectItems({ item }: ProjectItemsProps) {
         priority
         src={item.image}
         alt={item.title}
-        className={`project__img cursor-pointer ${isFront ? "z-1" : "z-10"}`}
+        className={`border border-green-500 project__img cursor-pointer ${isFront ? "z-1" : "z-10"}`}
         height={150}
         width={150}
         onClick={handleClick}
       />
       <div
-        className={`project__card flex flex-col items-center justify-center max-sm:mb-3 -mt-40 max-sm:-mt-26 max-sm:-ml-4 max-sm:mr-4 ${
+        className={`border border-green-500 project__card flex flex-col items-center justify-center max-sm:mb-3 -mt-40 max-sm:-mt-26 max-sm:-ml-4 max-sm:mr-4 ${
           isOdd ? "-ml-12 mr-12" : "-mr-36 ml-36"
         } ${isFront ? "z-10" : "z-1"}`}
         key={item.id}
@@ -49,7 +49,7 @@ export default function ProjectItems({ item }: ProjectItemsProps) {
             <FiGithub />
           </Link>
         </div>
-        <div className="text-center my-5 grid grid-cols-2 justify-center">
+        <div className="text-center my-5 grid grid-cols-2 justify-center text-white/80">
           {item.langs.map((lang, index) => (
             <span
               key={index}
