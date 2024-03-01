@@ -19,15 +19,15 @@ const skills: SkillIconProps[] = [
   },
   {
     src: Soon,
-    alt: "coming soon",
+    alt: "TBA",
   },
   {
     src: Soon,
-    alt: "coming soon",
+    alt: "TBA",
   },
   {
     src: Soon,
-    alt: "coming soon",
+    alt: "TBA",
   },
 ];
 

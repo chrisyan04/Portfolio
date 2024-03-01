@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./About.css";
 import ItsMe from "@/public/its-me.webp";
 import resumeWebp from "@/public/RESUME.webp";
 import Info from "./Info";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 export default function About() {
   const [resumeToggle, setResumeToggle] = useState(false);
@@ -26,20 +27,87 @@ export default function About() {
   };
   return (
     <section className="about section" id="about">
-      <h2 className="section__title text-4xl text-green-500">{"// About · Me"}</h2>
-      <span className="section__subtitle">I promise, I'm not boring! 😊</span>
+      <motion.h2
+        className="section__title text-4xl text-green-500"
+        initial={{
+          opacity: 0,
+          y: -50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
+        {"// About · Me"}
+      </motion.h2>
+      <motion.span
+        className="section__subtitle"
+        initial={{
+          opacity: 0,
+          y: -50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
+        I promise, I'm not boring! 😊
+      </motion.span>
       <div className="about__container container grid">
-        <Image
-          src={ItsMe}
-          height={200}
-          width={200}
-          alt="Chris Yan"
-          className="about__img border-8 border-double border-green-400"
-        />
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1 },
+            x: 0,
+          }}
+          viewport={{ once: false }}
+        >
+          <Image
+            src={ItsMe}
+            height={200}
+            width={200}
+            alt="Chris Yan"
+            className="about__img border-8 border-double border-green-400"
+          />
+        </motion.div>
 
         <div className="about__data">
-          <Info />
-          <div className="home__description rounded-lg relative">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -50,
+            }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1 },
+              y: 0,
+            }}
+            viewport={{ once: false }}
+          >
+            <Info />
+          </motion.div>
+
+          <motion.div
+            className="home__description rounded-lg relative"
+            initial={{
+              opacity: 0,
+              x: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1 },
+              x: 0,
+            }}
+            viewport={{ once: false }}
+          >
             <p>
               <span className="text-yellow-600 font-bold">python</span>
               <span className="absolute top-2 right-5">
@@ -59,16 +127,26 @@ export default function About() {
                 style={{
                   fontSize: "0.8rem",
                   display: "inline-block",
-                  color: "rgb(2 132 199)",
+                  color: "#2f8ca3",
                 }}
                 repeat={1}
                 cursor={false}
               />
             </span>
-          </div>
-          <button
-            className="button button--flex py-2 px-10 rounded-lg"
+          </motion.div>
+          <motion.button
+            className="button button--flex -mt-8 mb-8 rounded-lg"
             onClick={handleResumeToggle}
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1 },
+              y: 0,
+            }}
+            viewport={{ once: false }}
           >
             Resume
             <svg
@@ -96,7 +174,7 @@ export default function About() {
                 fill="#38a169"
               ></path>
             </svg>
-          </button>
+          </motion.button>
         </div>
       </div>
       {resumeToggle && (

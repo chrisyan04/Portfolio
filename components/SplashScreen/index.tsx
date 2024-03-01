@@ -37,13 +37,8 @@ export default function SplashScreen({
           duration: 2000,
           easing: "easeInOutQuad",
         },
-        translateY: {
-          value: translateYValue,
-          duration: 2500,
-          easing: "easeInOutQuad",
-        },
         scale: {
-          value: 0.2,
+          value: 0,
           duration: 2000,
           easing: "easeInOutQuad",
         },

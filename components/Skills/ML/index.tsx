@@ -27,7 +27,7 @@ const skills: SkillIconProps[] = [
   },
   {
     src: Soon,
-    alt: "coming soon",
+    alt: "TBA",
   },
 ];
 

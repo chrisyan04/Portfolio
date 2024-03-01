@@ -1,4 +1,3 @@
-import React from "react";
 import "./Skills.css";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
@@ -7,6 +6,8 @@ import ML from "./ML";
 import { v4 as uuidv4 } from "uuid";
 import SkillsCarousel from "./Carousel";
 import ProgressLine from "./ProgressLine";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface Skill {
   name: string;
@@ -37,15 +38,57 @@ export default function Skills() {
       content: <ML />,
     },
   ];
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
+
+
   return (
     <section className="skills section" id="skills">
-      <h2 className="section__title text-4xl text-green-500">{"// Skills"}</h2>
-      <span className="section__subtitle pb-10">
+      <motion.h2
+        className="section__title text-4xl text-green-500"
+        initial={{
+          opacity: 0,
+          y: -50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
+        {"// Skills"}
+      </motion.h2>
+      <motion.span
+        className="section__subtitle pb-10"
+        initial={{
+          opacity: 0,
+          y: -50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
         Currently Lvl. <span className="text-green-500/80">36</span> 🔀 Journey
         to Lvl. <span className="text-green-500/80">100</span> 📈
-      </span>
+      </motion.span>
       <center>
-        <div className="-mt-16 mb-24">
+        <motion.div
+          className="-mt-16 mb-24"
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1 },
+          }}
+          viewport={{ once: false }}
+        >
           <ProgressLine
             label=""
             backgroundColor="#333333"
@@ -55,11 +98,24 @@ export default function Skills() {
                 color: "#22C55E",
               },
             ]}
+            restartAnimation={inView}
           />
-        </div>
+        </motion.div>
       </center>
       <center>
-        <div className="skills__container py-28 sm:w-1/4">
+        <motion.div
+          className="skills__container py-28 sm:w-1/4"
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1 },
+            y: 0,
+          }}
+          viewport={{ once: false }}
+        >
           <SkillsCarousel
             cards={cards}
             offset={2}
@@ -68,9 +124,23 @@ export default function Skills() {
             height={"100%"}
             margin={"0 auto"}
           />
-        </div>
+        </motion.div>
       </center>
-      <p className="pt-20 text-center italic text-green-500/80">#trusttheprocess</p>
+      <motion.p
+        className="pt-12 mt-12 text-center italic text-green-500/80"
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
+        #trusttheprocess #believe #grindneverends
+      </motion.p>
     </section>
   );
 }

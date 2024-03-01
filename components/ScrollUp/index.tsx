@@ -23,7 +23,10 @@ export default function ScrollUp() {
   }, []);
 
   return (
-    <a href="#" className="scrollup">
+    <a
+      href="#"
+      className="scrollup"
+    >
       <HiOutlineArrowSmUp className="scrollup__icon" />
     </a>
   );

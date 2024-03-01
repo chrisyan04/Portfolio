@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./ProgressLine.css";
+import { useInView } from "react-intersection-observer";
 
 interface VisualPart {
   percentage: string;
@@ -12,6 +13,7 @@ interface ProgressLineProps {
   label?: string;
   backgroundColor?: string;
   visualParts?: VisualPart[];
+  restartAnimation?: boolean;
 }
 
 export default function ProgressLine({
@@ -23,7 +25,12 @@ export default function ProgressLine({
       color: "white",
     },
   ],
+  restartAnimation = false,
 }: ProgressLineProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
+
   const [widths, setWidths] = useState(
     visualParts.map(() => {
       return 0;
@@ -31,17 +38,19 @@ export default function ProgressLine({
   );
 
   useEffect(() => {
-    requestAnimationFrame(() => {
-      setWidths(
-        visualParts.map((item) => {
-          return parseFloat(item.percentage);
-        })
-      );
-    });
-  }, [visualParts]);
+     if (inView || restartAnimation) {
+       requestAnimationFrame(() => {
+         setWidths(
+           visualParts.map((item) => {
+             return parseFloat(item.percentage);
+           })
+         );
+       });
+     }
+   }, [visualParts, restartAnimation, inView]);
 
   return (
-    <>
+    <div ref={ref}>
       <div className="progressLabel">{label}</div>
       <div
         className="progressVisualFull"
@@ -60,6 +69,6 @@ export default function ProgressLine({
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

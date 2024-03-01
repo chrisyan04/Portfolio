@@ -9,9 +9,15 @@ import {
 } from "react-icons/hi";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Experience() {
   const [toggleState, setToggleState] = useState(1);
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
 
   const toggleTab = (index: number) => {
     setToggleState(index);
@@ -19,25 +25,51 @@ export default function Experience() {
 
   return (
     <section className="experience section" id="experience">
-      <h2 className="section__title text-4xl text-green-500">
+      <motion.h2
+        className="section__title text-4xl text-green-500"
+        initial={{
+          opacity: 0,
+          y: -50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
         {"// Experience"}
-      </h2>
-      <span className="section__subtitle">
-        <TypeAnimation
-          sequence={[
-            `"I never dreamed about success. I worked for it." \n (Estée Lauder) 🙏🏼`,
-          ]}
-          wrapper="span"
-          speed={30}
-          style={{
-            fontSize: "0.8rem",
-            display: "inline-block",
-            color: "#888888",
-          }}
-          repeat={1}
-          cursor={false}
-        />
-      </span>
+      </motion.h2>
+      <motion.span
+        className="section__subtitle"
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 2.5 },
+        }}
+        viewport={{ once: false }}
+      >
+        <div ref={ref}>
+          {inView && (
+            <TypeAnimation
+              sequence={[
+                `"I never dreamed about success. I worked for it." \n (Estée Lauder) 🙏🏼"`,
+              ]}
+              wrapper="span"
+              speed={30}
+              style={{
+                fontSize: "0.8rem",
+                display: "inline-block",
+                color: "#888888",
+              }}
+              repeat={1}
+              cursor={false}
+            />
+          )}
+        </div>
+      </motion.span>
 
       <div className="experience__container container -mt-8">
         <div className="experience__tabs">
@@ -74,8 +106,20 @@ export default function Experience() {
             }
           >
             <div className="experience__data">
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   HS Student
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -90,7 +134,7 @@ export default function Experience() {
                     <p>2018 - 2020</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               <div>
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
@@ -102,8 +146,20 @@ export default function Experience() {
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
               </div>
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   HS Student
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -118,11 +174,23 @@ export default function Experience() {
                     2020 - 2022
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="experience__data">
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 py-1 px-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 py-1 px-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   Machine Learning
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -137,7 +205,7 @@ export default function Experience() {
                     2022 - Present
                   </div>
                 </div>
-              </div>
+              </motion.div>
               <div>
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
@@ -152,8 +220,20 @@ export default function Experience() {
             }
           >
             <div className="experience__data">
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   Math Tutor
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -168,7 +248,7 @@ export default function Experience() {
                     Nov 2020 - Jan 2021
                   </div>
                 </div>
-              </div>
+              </motion.div>
               <div>
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
@@ -180,8 +260,20 @@ export default function Experience() {
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
               </div>
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   Data Analyst
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -194,11 +286,23 @@ export default function Experience() {
                     Jun 2023 - Dec 2023
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="experience__data">
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   Web Developer
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -211,7 +315,7 @@ export default function Experience() {
                     Nov 2023 - Present
                   </div>
                 </div>
-              </div>
+              </motion.div>
               <div>
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
@@ -223,8 +327,20 @@ export default function Experience() {
                 <span className="experience__rounder"></span>
                 <span className="experience__line"></span>
               </div>
-              <div className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative">
-                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[100]">
+              <motion.div
+                className="bg-transaparent py-1 rounded-lg text-center flex justify-center items-center flex-col relative"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 1.5 },
+                  y: 0,
+                }}
+                viewport={{ once: false }}
+              >
+                <h3 className="experience__title border border-green-500 p-1 rounded-lg -mb-4 bg-[#191919] z-[50]">
                   Data Scientist
                 </h3>
                 <div className="flex flex-col items-center justify-center pb-1 px-3 bg-transparent border border-green-500 rounded-lg pt-6 w-48">
@@ -239,15 +355,27 @@ export default function Experience() {
                     Jan 2024 - Present
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
-      <div className="text-center pt-12 text-sm">
+      <motion.div
+        className="text-center pt-12 text-sm"
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1.5 },
+          y: 0,
+        }}
+        viewport={{ once: false }}
+      >
         <p>{"// For more information, check out my notLinkedIn page "}</p>
         <center>
-          <Link href="/not-linkedin" target="_blank">
+          <Link href="/working-on-it" target="_blank">
             <svg
               className="mt-2 cursor-pointer"
               fill="#22C55E"
@@ -263,7 +391,7 @@ export default function Experience() {
             </svg>
           </Link>
         </center>
-      </div>
+      </motion.div>
     </section>
   );
 }

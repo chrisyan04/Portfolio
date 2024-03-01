@@ -12,6 +12,7 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 });
 
 export default function Info() {
+
   return (
     <div className="about__info grid">
       <div className="about__box">
