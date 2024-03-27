@@ -17,8 +17,13 @@ export default function Landing() {
           className="pointer-events-none fixed inset-0 z-[999] h-full w-full"
         />
       )}
-      <main className="flex min-h-screen flex-col items-center justify-between pt-4">
-        <Navbar isCursorTrailActive={isCursorTrailActive} setCursorTrailActive={setCursorTrailActive} />
+      <div className="flex items-center justify-center pt-4">
+        <Navbar
+          isCursorTrailActive={isCursorTrailActive}
+          setCursorTrailActive={setCursorTrailActive}
+        />
+      </div>
+      <main className="flex min-h-screen flex-col items-center justify-between">
         <Home />
       </main>
     </NextUIProvider>

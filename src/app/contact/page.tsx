@@ -3,7 +3,7 @@
 import { NextUIProvider } from "@nextui-org/react";
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Navbar from "@/components/Navbar";
-import Home from "@/components/Home";
+import Contact from "@/components/Contact";
 import { useState } from "react";
 
 export default function Landing() {
@@ -17,12 +17,14 @@ export default function Landing() {
           className="pointer-events-none fixed inset-0 z-[999] h-full w-full"
         />
       )}
-      <main className="flex min-h-screen flex-col items-center justify-between pt-4">
+      <div className="flex items-center justify-center pt-4">
         <Navbar
           isCursorTrailActive={isCursorTrailActive}
           setCursorTrailActive={setCursorTrailActive}
         />
-        <Home />
+      </div>
+      <main className="flex min-h-screen flex-col items-center justify-between">
+        <Contact />
       </main>
     </NextUIProvider>
   );

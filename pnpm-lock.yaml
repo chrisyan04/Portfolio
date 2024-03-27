@@ -20,6 +20,9 @@ dependencies:
   react-dom:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
+  react-terminal-ui:
+    specifier: ^1.2.0
+    version: 1.2.0(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/node':
@@ -4625,6 +4628,16 @@ packages:
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.6.2
+    dev: false
+
+  /react-terminal-ui@1.2.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-MTPIrWoLGH46zk8yLd8c8YTqgixggvOsfDBmZf/iVJBgJU0RDgOqjlyYFnh6rRsERXh91+aXm6f5zc+eMoUgEA==}
+    peerDependencies:
+      react: '>16.13.0'
+      react-dom: '>16.13.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-textarea-autosize@8.5.3(@types/react@18.2.71)(react@18.2.0):
