@@ -13,13 +13,18 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
-import React from "react";
+import React, { useState } from "react";
 import signature from "@/public/Icons/chris-sig.svg";
 import Image from "next/image";
 import NavbarDropdown from "./Dropdown";
 import { motion } from "framer-motion";
 
-export default function Navbar() {
+interface NavbarProps {
+  isCursorTrailActive: boolean;
+  setCursorTrailActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Navbar({ isCursorTrailActive, setCursorTrailActive }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = ["home", "experience", "projects", "blog", "contact"];
@@ -93,7 +98,10 @@ export default function Navbar() {
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem>
-            <NavbarDropdown />
+            <NavbarDropdown
+              isCursorTrailActive={isCursorTrailActive}
+              setCursorTrailActive={setCursorTrailActive}
+            />
           </NavbarItem>
         </NavbarContent>
         <NavbarMenu className="shadow-around bg-[#18181b] max-h-72 w-40 backdrop-blur-md border border-[#d4d4d8] ml-8 mt-9 pt-8 rounded-xl overflow-hidden">

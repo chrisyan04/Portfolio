@@ -11,6 +11,7 @@ import {
 } from "@nextui-org/react";
 import { Switch } from "@nextui-org/react";
 
+
 const moonIcon = (
   <svg
     aria-hidden="true"
@@ -43,9 +44,18 @@ const sunIcon = (
   </svg>
 );
 
-export default function NavbarDropdown() {
+interface NavbarDropdownProps {
+  isCursorTrailActive: boolean;
+  setCursorTrailActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function NavbarDropdown({ isCursorTrailActive, setCursorTrailActive}: NavbarDropdownProps) {
+    const handleCursorTrailToggle = (newValue: boolean) => {
+      setCursorTrailActive(newValue);
+    };
+
   return (
-    <Dropdown className="shadow-around mt-6 bg-[#18181b] border border-[#d4d4d8]">
+    <Dropdown className="shadow-around mt-6 bg-[#18181b] border border-[#d4d4d8]" closeOnSelect={false}>
       <DropdownTrigger>
         <Button variant="shadow" className="text-xl text-black">
           {"/mod"}
@@ -55,8 +65,12 @@ export default function NavbarDropdown() {
         aria-label="Display mods"
         disabledKeys={["fr", "ch", "tbd"]}
       >
-        <DropdownSection showDivider aria-label="dark mode">
-          <DropdownItem key="theme-switch" className="bg-white">
+        <DropdownSection
+          showDivider
+          aria-label="toggle options"
+          title="Toggle Options"
+        >
+          <DropdownItem key="theme-switch" className="bg-white" textValue="/dark-mode">
             <Switch
               defaultSelected
               size="sm"
@@ -70,6 +84,16 @@ export default function NavbarDropdown() {
               }
             >
               <span>{"/dark-mode"}</span>
+            </Switch>
+          </DropdownItem>
+          <DropdownItem key="cursor-trail" className="bg-white mt-2" textValue="/cursor-trail">
+            <Switch
+              isSelected={isCursorTrailActive}
+              size="sm"
+              color="secondary"
+              onValueChange={handleCursorTrailToggle}
+            >
+              <span>{"/cursor-trail"}</span>
             </Switch>
           </DropdownItem>
         </DropdownSection>
