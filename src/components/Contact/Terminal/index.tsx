@@ -11,9 +11,11 @@ import { motion } from "framer-motion";
 export default function TerminalController() {
   const [colorMode, setColorMode] = useState(ColorMode.Dark);
   const [lineData, setLineData] = useState([
-    <TerminalOutput key={1}>💬 Let's Chat!</TerminalOutput>,
+    <TerminalOutput key={1}>💬 Let&apos;s Chat!</TerminalOutput>,
     <TerminalOutput key={2}></TerminalOutput>,
-    <TerminalOutput key={3}>🧠 type 'help' to get started</TerminalOutput>,
+    <TerminalOutput key={3}>
+      🧠 type &apos;help&apos; to get started
+    </TerminalOutput>,
   ]);
 
   function onInput(input: string) {
@@ -77,7 +79,9 @@ export default function TerminalController() {
     } else if (input.toLocaleLowerCase().trim() === "clear") {
       ld = [];
       ld.push(
-        <TerminalOutput key={5}>🧠 type 'help' to get started</TerminalOutput>
+        <TerminalOutput key={5}>
+          🧠 type &apos;help&apos; to get started
+        </TerminalOutput>
       );
     } else if (input) {
       ld.push(
