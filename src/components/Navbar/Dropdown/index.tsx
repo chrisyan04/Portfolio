@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   Dropdown,
   DropdownTrigger,
@@ -10,7 +9,6 @@ import {
   Button,
 } from "@nextui-org/react";
 import { Switch } from "@nextui-org/react";
-
 
 const moonIcon = (
   <svg
@@ -49,15 +47,24 @@ interface NavbarDropdownProps {
   setCursorTrailActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function NavbarDropdown({ isCursorTrailActive, setCursorTrailActive}: NavbarDropdownProps) {
-    const handleCursorTrailToggle = (newValue: boolean) => {
-      setCursorTrailActive(newValue);
-    };
+export default function NavbarDropdown({
+  isCursorTrailActive,
+  setCursorTrailActive,
+}: NavbarDropdownProps) {
+  const handleCursorTrailToggle = (newValue: boolean) => {
+    setCursorTrailActive(newValue);
+  };
 
   return (
-    <Dropdown className="shadow-around mt-6 bg-[#18181b] border border-[#d4d4d8]" closeOnSelect={false}>
+    <Dropdown
+      className="shadow-around mt-6 bg-[#18181b] border border-[#d4d4d8]"
+      closeOnSelect={false}
+    >
       <DropdownTrigger>
-        <Button variant="shadow" className="text-xl text-black">
+        <Button
+          variant="ghost"
+          className="text-lg bg-gradient-to-tr from-pink-800 to-yellow-500 text-white shadow-around"
+        >
           {"/mod"}
         </Button>
       </DropdownTrigger>
@@ -70,7 +77,11 @@ export default function NavbarDropdown({ isCursorTrailActive, setCursorTrailActi
           aria-label="toggle options"
           title="Toggle Options"
         >
-          <DropdownItem key="theme-switch" className="bg-white" textValue="/dark-mode">
+          <DropdownItem
+            key="theme-switch"
+            className="bg-white"
+            textValue="/dark-mode"
+          >
             <Switch
               defaultSelected
               size="sm"
@@ -86,7 +97,11 @@ export default function NavbarDropdown({ isCursorTrailActive, setCursorTrailActi
               <span>{"/dark-mode"}</span>
             </Switch>
           </DropdownItem>
-          <DropdownItem key="cursor-trail" className="bg-white mt-2" textValue="/cursor-trail">
+          <DropdownItem
+            key="cursor-trail"
+            className="bg-white mt-2"
+            textValue="/cursor-trail"
+          >
             <Switch
               isSelected={isCursorTrailActive}
               size="sm"

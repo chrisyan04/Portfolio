@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { Badge, Avatar } from "@nextui-org/react";
 import Link from "next/link";
 import { motion } from "framer-motion";

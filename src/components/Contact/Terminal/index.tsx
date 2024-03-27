@@ -92,23 +92,34 @@ export default function TerminalController() {
   return (
     <section className="pt-10" id="terminal">
       <motion.h2
-        className="justify-center items-center flex text-4xl text-[#d4d4d8] font-bold"
+        className="justify-center items-center flex text-4xl max-sm:text-2xl text-[#d4d4d8] font-bold"
         initial={{
           opacity: 0,
+          scale: 0.8,
         }}
         whileInView={{
           opacity: 1,
-          transition: { duration: 1 },
+          scale: 1,
+          transition: { duration: 1.5 },
         }}
         viewport={{ once: false }}
       >
         {"Connect with me ..."}
       </motion.h2>
-      <div className="shadow-around mt-8 border overflow-hidden border-[#d4d4d8] rounded-[25px] sm:w-[600px] md:w-[1000px] w-96 sm:h-[550px] h-[500px] bg-[#252a33]">
+      <motion.div
+        className="shadow-around mt-8 border overflow-hidden border-[#d4d4d8] rounded-[25px] sm:w-[600px] md:w-[1000px] w-96 sm:h-[550px] h-[500px] bg-[#252a33]"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
         <Terminal name="guest ~ cmd" onInput={onInput} height="400px">
           {lineData}
         </Terminal>
-      </div>
+      </motion.div>
     </section>
   );
 }

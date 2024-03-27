@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 .shadow-around {
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px 0 rgba(245, 158, 11, 1), 
+              0 0 10px 0 rgba(75, 0, 130, 1);
 }
