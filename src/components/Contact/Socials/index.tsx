@@ -26,11 +26,14 @@ export default function Socials() {
           viewport={{ once: false }}
         >
           <Link href="https://github.com/chrisyan04" target="_blank">
-            <Badge content="20" className="h-8 w-12 text-lg" color="danger">
+            <Badge
+              content="20"
+              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
+              color="danger"
+            >
               <Avatar
-                isBordered
                 radius="full"
-                className="w-24 h-24 text-large"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
                 src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
               />
             </Badge>
@@ -50,11 +53,14 @@ export default function Socials() {
           viewport={{ once: false }}
         >
           <Link href="https://www.instagram.com/chris.yan_/" target="_blank">
-            <Badge content="69" className="h-8 w-12 text-lg" color="danger">
+            <Badge
+              content="69"
+              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
+              color="danger"
+            >
               <Avatar
-                isBordered
                 radius="full"
-                className="w-24 h-24 text-large"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png?20200512141346"
               />
             </Badge>
@@ -77,11 +83,14 @@ export default function Socials() {
             href="https://www.linkedin.com/in/chris-cx-yan/"
             target="_blank"
           >
-            <Badge content="99+" className="h-8 w-12 text-lg" color="danger">
+            <Badge
+              content="99+"
+              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
+              color="danger"
+            >
               <Avatar
-                isBordered
                 radius="full"
-                className="w-24 h-24 text-large"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/144px-LinkedIn_icon.svg.png?20210220164014"
               />
             </Badge>
@@ -104,11 +113,14 @@ export default function Socials() {
             href="https://www.eliteprospects.com/player/569280/chris-yan"
             target="_blank"
           >
-            <Badge content="17" className="h-8 w-12 text-lg" color="danger">
+            <Badge
+              content="17"
+              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
+              color="danger"
+            >
               <Avatar
-                isBordered
                 radius="full"
-                className="w-24 h-24 text-large"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
                 src="https://pbs.twimg.com/profile_images/1712514290186428416/3YABXwSG_400x400.jpg"
               />
             </Badge>

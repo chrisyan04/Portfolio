@@ -23,12 +23,12 @@ export default function JobPopover() {
         delay: 5,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-      className='max-sm:py-2'
+      className="max-sm:py-2 md:py-2"
     >
       <Popover placement={popoverPlacement}>
         <PopoverTrigger>
           <Button className="text-lg shadow-around bg-gradient-to-tr from-red-500 to-purple-800 text-white">
-            {"Current Job"}
+            {"current job"}
             <Image src={rightDark} alt="right dark" height={25} width={25} />
           </Button>
         </PopoverTrigger>

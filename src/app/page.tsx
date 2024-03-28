@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Navbar from "@/components/Navbar";
 import Home from "@/components/Home";
+import About from "@/components/About";
 import { useState } from "react";
 
 export default function Landing() {
@@ -25,6 +26,7 @@ export default function Landing() {
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between">
         <Home />
+        <About />
       </main>
     </NextUIProvider>
   );

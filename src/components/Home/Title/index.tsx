@@ -89,7 +89,7 @@ export default function Title() {
       </div>
       <div>
         <motion.h1
-          data-shadow="Yan"
+          data-shadow="YAN"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -98,7 +98,7 @@ export default function Title() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          Yan
+          YAN
         </motion.h1>
       </div>
     </div>

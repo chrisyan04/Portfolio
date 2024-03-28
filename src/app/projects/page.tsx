@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
+import UnderConstruction from "@/components/UnderConstruction";
 
 export default function Landing() {
   const [isCursorTrailActive, setCursorTrailActive] = useState<boolean>(false);
@@ -23,7 +24,7 @@ export default function Landing() {
         />
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between">
-        
+        <UnderConstruction />
       </main>
     </NextUIProvider>
   );

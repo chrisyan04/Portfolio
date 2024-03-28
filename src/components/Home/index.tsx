@@ -10,7 +10,7 @@ import Contact from "./Contact";
 
 export default function Home() {
   return (
-    <section className="flex justify-center items-center -mt-20 max-sm:-mt-10 h-screen">
+    <section className="flex justify-center items-center lg:-mt-20 md:-mt-10 max-sm:-mt-10 h-screen" id="home">
       <div className="grid sm:grid-cols-2 grid-cols-1 lg:gap-24 md:gap-20 gap-12">
         <motion.div
           className="home__img"
@@ -28,7 +28,7 @@ export default function Home() {
           <div className="pb-8 max-sm:pb-4">
             <Title />
           </div>
-          <div className="grid sm:grid-cols-3 grid-cols-1 gap-2 justify-items-center items-center">
+          <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-2 justify-items-center items-center">
             <Contact />
             <CVModal />
             <JobPopover />

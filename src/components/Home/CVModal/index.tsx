@@ -31,7 +31,7 @@ export default function CVModal() {
         delay: 5,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-      className='max-sm:py-2'
+      className="max-sm:py-2 md:py-2"
     >
       <Button
         onPress={onOpen}
@@ -43,7 +43,7 @@ export default function CVModal() {
           height={25}
           width={25}
         />
-        {"Resume"}
+        {"resume"}
       </Button>
       <Modal
         isOpen={isOpen}

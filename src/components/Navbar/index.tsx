@@ -57,7 +57,7 @@ export default function Navbar({
       }}
     >
       <NextUINavbar
-        shouldHideOnScroll={true}
+        shouldHideOnScroll={false}
         className="bg-[#18181b] rounded-3xl"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
