@@ -41,7 +41,7 @@ export default function JobPopover() {
                 <Link
                   href="https://www.difenda.com/"
                   target="_blank"
-                  className="underline text-[#ede19d]"
+                  className="text-transparent bg-gradient-to-tr from-[#c6be92] to-[#557d89] bg-clip-text"
                 >
                   {"Difenda"}
                 </Link>

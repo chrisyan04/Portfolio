@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Badge, Avatar } from "@nextui-org/react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -28,12 +28,11 @@ export default function Socials() {
           <Link href="https://github.com/chrisyan04" target="_blank">
             <Badge
               content="20"
-              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
-              color="danger"
+              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm text-white"
+              color="success"
             >
               <Avatar
-                radius="full"
-                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around rounded-[25px]"
                 src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
               />
             </Badge>
@@ -59,8 +58,7 @@ export default function Socials() {
               color="danger"
             >
               <Avatar
-                radius="full"
-                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around rounded-[25px]"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png?20200512141346"
               />
             </Badge>
@@ -86,11 +84,10 @@ export default function Socials() {
             <Badge
               content="99+"
               className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
-              color="danger"
+              color="primary"
             >
               <Avatar
-                radius="full"
-                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around rounded-[25px]"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/144px-LinkedIn_icon.svg.png?20210220164014"
               />
             </Badge>
@@ -115,12 +112,11 @@ export default function Socials() {
           >
             <Badge
               content="17"
-              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm"
-              color="danger"
+              className="h-8 w-12 text-lg max-sm:w-9 max-sm:h-6 max-sm:text-sm text-white"
+              color="warning"
             >
               <Avatar
-                radius="full"
-                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around"
+                className="w-24 h-24 text-large max-sm:w-20 max-sm:h-20 shadow-around rounded-[25px]"
                 src="https://pbs.twimg.com/profile_images/1712514290186428416/3YABXwSG_400x400.jpg"
               />
             </Badge>
