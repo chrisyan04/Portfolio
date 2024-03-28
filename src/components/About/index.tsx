@@ -15,7 +15,7 @@ import PersonalInfo from "./Info";
 export default function About() {
   return (
     <section
-      className="h-screen max-sm:h-auto flex flex-col jusitfy-center items-center pt-4"
+      className="h-screen max-sm:h-auto sm:h-auto md:h-auto flex flex-col jusitfy-center items-center lg:my-10"
       id="about"
     >
       <motion.span

@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import GeneralSkills from "./General";
+import IndividualSkills from "./Individual";
 
 export default function Skills() {
   return (
     <section
-      className="flex flex-col jusitfy-center items-center pt-4 h-screen max-sm:h-auto"
+      className="flex flex-col jusitfy-center items-center pt-4 lg:h-screen sm:h-auto md:h-auto max-sm:h-auto lg:my-10"
       id="skills"
     >
       <motion.span
@@ -24,6 +25,7 @@ export default function Skills() {
         {"{ skills }"}
       </motion.span>
       <GeneralSkills />
+      <IndividualSkills />
     </section>
   );
 }

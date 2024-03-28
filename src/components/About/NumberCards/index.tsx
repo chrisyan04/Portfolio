@@ -15,7 +15,7 @@ export default function NumberCards() {
 
   return (
     <motion.div
-      className="grid lg:grid-cols-3 md:grid-cols-3 max-sm:grid-cols-1 justify-items-center items-center gap-4 max-sm:-mt-8"
+      className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 max-sm:grid-cols-1 justify-items-center items-center gap-4 max-sm:-mt-8"
       initial={{
         opacity: 0,
         scale: 0.8,

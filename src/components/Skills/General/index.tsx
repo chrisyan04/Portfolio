@@ -73,7 +73,7 @@ export default function GeneralSkills() {
         }}
         viewport={{ once: false }}
       >
-        <Card className="w-[240px] h-[240px] border-none bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-around2 border-white/30 border-2">
+        <Card className="w-[240px] h-[240px] bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-around2 border-white/30 border-2">
           <CardHeader className="justify-center items-center pb-0">
             <Chip
               classNames={{
@@ -142,7 +142,7 @@ export default function GeneralSkills() {
         }}
         viewport={{ once: false }}
       >
-        <Card className="w-[240px] h-[240px] border-none bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-around2 border-white/30 border-2">
+        <Card className="w-[240px] h-[240px] bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-around2 border-white/30 border-2">
           <CardHeader className="justify-center items-center pb-0">
             <Chip
               classNames={{
@@ -211,7 +211,7 @@ export default function GeneralSkills() {
         }}
         viewport={{ once: false }}
       >
-        <Card className="w-[240px] h-[240px] border-none bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-around2 border-white/30 border-2">
+        <Card className="w-[240px] h-[240px] bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-around2 border-white/30 border-2">
           <CardHeader className="justify-center items-center pb-0">
             <Chip
               classNames={{
