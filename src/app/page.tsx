@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import ScrollUp from "@/components/ScrollUp";
 import { useState } from "react";
 
 export default function Landing() {
@@ -30,6 +31,7 @@ export default function Landing() {
         <About />
         <Skills />
       </main>
+      <ScrollUp />
     </NextUIProvider>
   );
 }

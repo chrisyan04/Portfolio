@@ -47,7 +47,7 @@ export default function Navbar({
 
   return (
     <motion.div
-      className="w-11/12 rounded-3xl border-2 shadow-around sticky"
+      className="w-11/12 rounded-3xl border-2 shadow-around"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
