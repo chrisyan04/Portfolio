@@ -83,6 +83,7 @@ export default function NavbarDropdown({
             textValue="/dark-mode"
           >
             <Switch
+              isDisabled
               defaultSelected
               size="sm"
               color="secondary"

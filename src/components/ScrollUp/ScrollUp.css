@@ -21,7 +21,7 @@ html {
 
 @media screen and (max-width: 992px) {
    .scrollup {
-    right: 1.5rem;
+    right: 2rem;
     padding: 0.25rem 0.4rem;
    }
 
@@ -32,13 +32,13 @@ html {
 
 @media screen and (max-width: 768px) {
     .show-scroll {
-        bottom: 4rem;
+        bottom: 3rem;
     }
   
 }
 
 @media screen and (max-width: 350px) {
     .scrollup {
-        right: 1rem;
+        right: 1.5rem;
     }
 }

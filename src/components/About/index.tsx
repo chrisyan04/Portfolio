@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import hockeyMe from "@/public/hockey-me.jpg";
+import hockeyMe from "@/public/hockey-me.webp";
+import meProfessional from "@/public/me-professional.webp";
 import {
   Popover,
   PopoverTrigger,

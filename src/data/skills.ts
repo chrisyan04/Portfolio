@@ -19,8 +19,14 @@ export const skillList: skillListProps[] = [
   {
     title: "SQL",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+    level: 4,
+    tags: ["backend", "database"],
+  },
+  {
+    title: "MySQL",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
     level: 3,
-    tags: ["backend", "database", "cloud"],
+    tags: ["database", "cloud"],
   },
   {
     title: "Next.js",
@@ -56,7 +62,13 @@ export const skillList: skillListProps[] = [
     title: "Pandas",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
     level: 4,
-    tags: ["machine learning", "backend"],
+    tags: ["machine learning", "backend", "statistics"],
+  },
+  {
+    title: "scikit-learn",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-plain.svg",
+    level: 2,
+    tags: ["machine learning", "statistics"],
   },
   {
     title: "Firebase",
@@ -74,7 +86,7 @@ export const skillList: skillListProps[] = [
     title: "PowerBI",
     img: powerbi,
     level: 5,
-    tags: ["frontend"],
+    tags: ["frontend", "statistics"],
   },
   {
     title: "React.js",
@@ -85,7 +97,7 @@ export const skillList: skillListProps[] = [
   {
     title: "Node.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    level: 3,
+    level: 2,
     tags: ["backend"],
   },
   {
@@ -121,7 +133,7 @@ export const skillList: skillListProps[] = [
   {
     title: "Flask",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
-    level: 3,
+    level: 2,
     tags: ["backend"],
   },
   {
@@ -139,7 +151,13 @@ export const skillList: skillListProps[] = [
   {
     title: "PyTorch",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
-    level: 2,
+    level: 1,
     tags: ["machine learning"],
+  },
+  {
+    title: "R",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg",
+    level: 3,
+    tags: ["machine learning", "statistics"],
   },
 ];
