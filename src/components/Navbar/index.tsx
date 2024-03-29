@@ -47,7 +47,7 @@ export default function Navbar({
 
   return (
     <motion.div
-      className="w-11/12 rounded-3xl border-2 shadow-around"
+      className="w-11/12 rounded-3xl border-2 shadow-around sticky"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -57,7 +57,6 @@ export default function Navbar({
       }}
     >
       <NextUINavbar
-        shouldHideOnScroll={false}
         className="bg-[#18181b] rounded-3xl"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}

@@ -14,7 +14,7 @@ export const skillList: skillListProps[] = [
     title: "Python",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
     level: 4,
-    tags: ["frontend", "backend", "machine-learning"],
+    tags: ["frontend", "backend", "machine learning"],
   },
   {
     title: "SQL",
@@ -56,7 +56,7 @@ export const skillList: skillListProps[] = [
     title: "Pandas",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
     level: 4,
-    tags: ["machine-learning", "backend"],
+    tags: ["machine learning", "backend"],
   },
   {
     title: "Firebase",
@@ -92,7 +92,7 @@ export const skillList: skillListProps[] = [
     title: "TensorFlow",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
     level: 2,
-    tags: ["machine-learning"],
+    tags: ["machine learning"],
   },
   {
     title: "Java",
@@ -140,6 +140,6 @@ export const skillList: skillListProps[] = [
     title: "PyTorch",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
     level: 2,
-    tags: ["machine-learning"],
+    tags: ["machine learning"],
   },
 ];

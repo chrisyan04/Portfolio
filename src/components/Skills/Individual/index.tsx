@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { skillList } from "@/data/skills";
@@ -11,14 +11,29 @@ import {
   Pagination,
   PaginationItemType,
   PaginationItemRenderProps,
+  Select,
+  SelectItem,
+  Checkbox,
+  CheckboxGroup,
 } from "@nextui-org/react";
 import { ChevronIcon } from "./ChevronIcon";
 import Image from "next/image";
 
+const skillTags = [
+  "frontend",
+  "backend",
+  "database",
+  "cloud",
+  "tool",
+  "machine learning",
+];
+
 export default function IndividualSkills() {
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
-  
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedLevels, setSelectedLevels] = useState<string[]>([]);
+
   useEffect(() => {
     function updateItemsPerPage() {
       if (window.innerWidth >= 1022) {
@@ -44,7 +59,17 @@ export default function IndividualSkills() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const currentSkills = skillList.slice(startIndex, endIndex);
+  const filteredSkills = skillList.filter((skill) => {
+    const matchesTags =
+      selectedTags.length === 0 ||
+      selectedTags.some((tag) => skill.tags.includes(tag));
+    const matchesLevels =
+      selectedLevels.length === 0 ||
+      selectedLevels.includes(skill.level.toString());
+    return matchesTags && matchesLevels;
+  });
+
+  const currentSkills = filteredSkills.slice(startIndex, endIndex);
 
   const totalPages = Math.ceil(skillList.length / itemsPerPage);
 
@@ -52,7 +77,20 @@ export default function IndividualSkills() {
     setCurrentPage(page);
   };
 
- 
+  const handleTagSelect = (selected: string) => {
+    if (selectedTags.includes(selected)) {
+      setSelectedTags([]);
+    } else {
+      setSelectedTags([selected]);
+    }
+    setCurrentPage(1);
+  };
+
+  const handleLevelSelect = (selected: string[]) => {
+    setSelectedLevels(selected);
+    setCurrentPage(1);
+  };
+
   const renderItem = ({
     ref,
     key,
@@ -62,8 +100,8 @@ export default function IndividualSkills() {
     onPrevious,
     setPage,
     className,
-    //@ts-ignore
-  }: PaginationItemRenderProps<HTMLButtonElement>) => {
+  }: //@ts-ignore
+  PaginationItemRenderProps<HTMLButtonElement>) => {
     if (value === PaginationItemType.NEXT) {
       return (
         <button
@@ -114,9 +152,81 @@ export default function IndividualSkills() {
   };
 
   return (
-    <div className="my-10 text-white">
+    <div className="my-10 text-white max-sm:w-[380px] pb-10">
+      <div className="mb-6 px-4 max-sm:mx-2 max-sm:pb-0">
+        <div className="text-center pb-3">
+          <motion.span
+            className="text-transparent bg-gradient-to-tr from-pink-800 to-yellow-400 bg-clip-text text-[35px] max-sm:text-[30px]"
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.8 },
+            }}
+            viewport={{ once: false }}
+          >
+            {"_skills_db"}
+          </motion.span>
+        </div>
+        <div className="pt-4 grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-6 place-items-center">
+          <div className="w-[300px]">
+            <Select
+              className="max-w-xs dark shadow-around rounded-xl"
+              label="skill tags"
+              placeholder="select filter tags"
+              selectionMode="single"
+              onSelectionChange={(value) => {
+                //@ts-ignore
+                const index = parseInt(value.anchorKey);
+                if (!isNaN(index)) {
+                  const selectedTag = skillTags[index];
+                  console.log("selectedTag:", selectedTag);
+                  handleTagSelect(selectedTag);
+                }
+              }}
+            >
+              {skillTags.map((tag, index) => (
+                <SelectItem className="dark" key={index} value={tag}>
+                  {tag}
+                </SelectItem>
+              ))}
+            </Select>
+          </div>
+          <div className="border-1 py-2 px-3 border-white/50 shadow-around rounded-xl text-center place-items-center grid">
+            <CheckboxGroup
+              label="select proficiency level"
+              orientation="horizontal"
+              color="default"
+              defaultValue={[]}
+              className="dark"
+              onValueChange={(values) => {
+                handleLevelSelect(values);
+              }}
+            >
+              <Checkbox value="1" className="dark">
+                <span className="text-sm">{"Lvl. 1"}</span>
+              </Checkbox>
+              <Checkbox value="2" className="dark">
+                <span className="text-sm">{"Lvl. 2"}</span>
+              </Checkbox>
+              <Checkbox value="3" className="dark">
+                <span className="text-sm">{"Lvl. 3"}</span>
+              </Checkbox>
+              <Checkbox value="4" className="dark">
+                <span className="text-sm">{"Lvl. 4"}</span>
+              </Checkbox>
+              <Checkbox value="5" className="dark">
+                <span className="text-sm">{"Lvl. 5"}</span>
+              </Checkbox>
+            </CheckboxGroup>
+          </div>
+        </div>
+      </div>
       <motion.div
-        className="border-3 pt-8 px-6 max-sm:px-2 max-sm:pt-6 rounded-3xl min-h-[582px] shadow-around2"
+        className="border-2 border-white/50 pt-8 px-6 max-sm:px-2 max-sm:mx-3 max-sm:pt-6 rounded-3xl min-h-[582px] max-sm:min-w-[356px] sm:min-w-[578px] md:min-w-[744px] lg:min-w-[858px] shadow-around2"
         initial={{
           opacity: 0,
           scale: 0.8,
@@ -128,16 +238,15 @@ export default function IndividualSkills() {
         }}
         viewport={{ once: false }}
       >
-        <div className="gap-6 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 max-sm:grid-cols-2 pb-4 min-h-[476px]">
+        <div className="flex items-center justify-items-center gap-6 max-sm:gap-0 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 max-sm:grid-cols-2 mb-2 min-h-[476px] max-sm:min-w-[336px] sm:min-w-[526px] md:min-w-[692px] lg:min-w-[806px]">
           {currentSkills.map((skill, index) => (
             <Card
               shadow="sm"
               key={index}
               isPressable
-              onPress={() => console.log("item pressed")}
               className="bg-[#636366] border-1 border-white/50 rounded-3xl h-[218px] w-[142px] "
             >
-              <CardBody className="overflow-visible p-0 ">
+              <CardBody className="overflow-visible p-0 bg-blur">
                 <div className="flex justify-center items-center h-[140px] bg-gradient-to-br from-pink-800 to-yellow-400 border border-white/50 rounded-3xl">
                   <Image
                     height={100}
@@ -162,7 +271,7 @@ export default function IndividualSkills() {
             </Card>
           ))}
         </div>
-        <div className="py-4">
+        <div className="py-4 max-sm:max-w-[430px]">
           <center>
             <Pagination
               loop
