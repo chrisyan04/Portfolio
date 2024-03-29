@@ -3,6 +3,10 @@ import { Snippet } from "@nextui-org/react";
 import { motion } from "framer-motion";
 
 export default function PersonalInfo() {
+  const handleCopy = () => {
+    navigator.clipboard.writeText("lol you thought ... be original, don't copy this :)");
+  };
+
   return (
     <motion.div
       className="lg:py-8 max-sm:py-6"
@@ -17,7 +21,10 @@ export default function PersonalInfo() {
       }}
       viewport={{ once: false }}
     >
-      <Snippet className="text-[#d4d4d8] shadow-around py-4">
+      <Snippet
+        className="text-[#d4d4d8] shadow-around py-4"
+        onCopy={handleCopy}
+      >
         <span>
           <span className="text-green-500">{"aspirations { 💭 }:"}</span>
           <br />
