@@ -179,7 +179,18 @@ export default function IndividualSkills() {
           </span>
         </motion.div> */}
         <div className="pt-4 grid grid-cols-3 max-sm:grid-cols-1 max-sm:gap-6 place-items-center">
-          <div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.8 },
+            }}
+            viewport={{ once: false }}
+          >
             <Input
               className="dark shadow-around2 rounded-xl w-[250px]"
               label="search skill"
@@ -213,7 +224,7 @@ export default function IndividualSkills() {
                 <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
               }
             />
-          </div>
+          </motion.div>
           <motion.div
             className="border-1 py-2 px-3 max-sm:px-1.5 border-white/50 shadow-around2 rounded-xl text-center place-items-center grid"
             initial={{

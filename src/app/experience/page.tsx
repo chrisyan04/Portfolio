@@ -5,6 +5,7 @@ import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
 import UnderConstruction from "@/components/UnderConstruction";
+import ScrollUp from "@/components/ScrollUp";
 
 export default function Landing() {
   const [isCursorTrailActive, setCursorTrailActive] = useState<boolean>(false);
@@ -26,6 +27,7 @@ export default function Landing() {
       <main className="flex min-h-screen flex-col items-center justify-between">
         <UnderConstruction />
       </main>
+      <ScrollUp />
     </NextUIProvider>
   );
 }
