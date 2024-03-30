@@ -324,7 +324,7 @@ export default function IndividualSkills() {
               className="bg-[#636366] border-1 border-white/50 rounded-3xl h-[218px] w-[142px] "
             >
               <CardBody className="overflow-visible p-0 bg-blur">
-                <div className="flex justify-center items-center h-[140px] bg-gradient-to-br from-pink-800 to-yellow-400 border border-white/50 rounded-3xl">
+                <div className="flex justify-center items-center h-[140px] bg-gradient-to-br from-purple-800 to-fuchsia-500 border border-white/50 rounded-3xl">
                   <Image
                     height={100}
                     width={100}

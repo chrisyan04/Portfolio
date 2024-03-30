@@ -8,6 +8,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import ScrollUp from "@/components/ScrollUp";
 import { useState } from "react";
+import DisplayProjects from "@/components/DisplayProjects";
 
 export default function Landing() {
   const [isCursorTrailActive, setCursorTrailActive] = useState<boolean>(false);
@@ -30,6 +31,7 @@ export default function Landing() {
         <Home />
         <About />
         <Skills />
+        <DisplayProjects />
       </main>
       <ScrollUp />
     </NextUIProvider>
